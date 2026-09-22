@@ -19,7 +19,7 @@ export function createApp() {
   app.use(helmet({ crossOriginResourcePolicy: { policy: 'cross-origin' } }));
   app.use(
     cors({
-      origin: [env.clientUrl, 'https://justcakes-seven.vercel.app/'],
+      origin: [env.clientUrl],
       credentials: true,
     }),
   );
