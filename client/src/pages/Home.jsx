@@ -73,26 +73,35 @@ export default function Home() {
   const reviewsFor = (categoryName) =>
     reviews.filter((review) => review.productNameSnapshot && review.categoryName === categoryName);
   return (
-    <>
+    <div style={{ position: 'relative', minHeight: '100vh', width: '100vw' }}>
+      {/* Full Page Background Image */}
       <img 
         src="https://media.istockphoto.com/id/2228819615/photo/the-child-has-snot-the-child-is-crying-selective-focus.jpg?s=612x612&w=0&k=20&c=bYzeWMF10fShZ3efpbNOZP2uRkgzanzuPwNXMt5K6ps=" 
-        alt="Hedy Lamarr" 
-        width={600}
-        style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', object-fit: 'cover', zIndex: -1 }} 
-        
+        alt="Crying child" 
+        style={{ 
+          position: 'fixed', 
+          top: 0, 
+          left: 0, 
+          width: '100vw', 
+          height: '100vh', 
+          objectFit: 'cover', 
+          zIndex: -1 
+        }} 
       />
       <img 
         src="https://www.shutterstock.com/image-photo/portrait-little-naughty-boy-playing-260nw-1552119575.jpg" 
-        alt="Hedy Lamarr" 
-        width={600}
-        style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', object-fit: 'cover', zIndex: -1 }} 
-
+        alt="Crying child" 
+        style={{ 
+          position: 'fixed', 
+          top: 0, 
+          left: 0, 
+          width: '100vw', 
+          height: '100vh', 
+          objectFit: 'cover', 
+          zIndex: -1 
+        }} 
       />
-    
-    </>
-    
-    
-  );
+    );
   // return (
   //   <>
   //     <HeroSlideshow slides={slides} loading={loading} />
