@@ -59,8 +59,8 @@ export default function App() {
           </Route>
 
           {/* Owner */}
-          {/* <Route element={<OwnerRoute />}> */}
-            {/* <Route path="/owner" element={<OwnerDashboard />} /> */}
+          <Route element={<OwnerRoute />}>
+            <Route path="/owner" element={<OwnerDashboard />} />
             <Route path="/owner/orders" element={<OwnerOrders />} />
             <Route path="/owner/orders/:id" element={<OwnerOrderDetails />} />
             <Route path="/owner/products" element={<OwnerProducts />} />
