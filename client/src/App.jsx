@@ -34,7 +34,7 @@ export default function App() {
     <>
       <ScrollToTop />
       <Routes>
-        <Route element={<Layout />}>
+        {/* <Route element={<Layout />}> */}
           {/* Public */}
           <Route path="/" element={<Home />} />
           {/* <Route path="/cakes" element={<Cakes />} /> */}
@@ -71,8 +71,8 @@ export default function App() {
             <Route path="/owner/reviews" element={<OwnerReviews />} />
           </Route> */}
 
-          <Route path="*" element={<NotFound />} />
-        </Route>
+          {/* <Route path="*" element={<NotFound />} />
+        </Route> */}
       </Routes>
     </>
   );
