@@ -34,32 +34,32 @@ export default function App() {
     <>
       <ScrollToTop />
       <Routes>
-        {/* <Route element={<Layout />}> */}
+        <Route element={<Layout />}>
           {/* Public */}
           <Route path="/" element={<Home />} />
-          {/* <Route path="/cakes" element={<Cakes />} /> */}
-          {/* <Route path="/category/:slug" element={<CategoryPage />} /> */}
-          {/* <Route path="/product/:idOrSlug" element={<ProductDetails />} /> */}
-          {/* <Route path="/about" element={<About />} /> */}
-          {/* <Route path="/contact" element={<Contact />} /> */}
-          {/* <Route path="/login" element={<Login />} /> */}
-          {/* <Route path="/register" element={<Register />} /> */ }
+          <Route path="/cakes" element={<Cakes />} />
+          <Route path="/category/:slug" element={<CategoryPage />} />
+          <Route path="/product/:idOrSlug" element={<ProductDetails />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
           {/* <div></div> */}
 
           
 
           
           {/* Signed-in customer */}
-          {/* <Route element={<ProtectedRoute />}>
+          <Route element={<ProtectedRoute />}>
             <Route path="/checkout/:idOrSlug" element={<Checkout />} />
             <Route path="/order-placed/:id" element={<OrderPlaced />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/profile/orders" element={<Orders />} />
             <Route path="/profile/orders/:id" element={<OrderDetails />} />
-          </Route> */}
+          </Route>
 
           {/* Owner */}
-          {/* <Route element={<OwnerRoute />}>
+          <Route element={<OwnerRoute />}>
             <Route path="/owner" element={<OwnerDashboard />} />
             <Route path="/owner/orders" element={<OwnerOrders />} />
             <Route path="/owner/orders/:id" element={<OwnerOrderDetails />} />
@@ -69,10 +69,10 @@ export default function App() {
             <Route path="/owner/categories" element={<OwnerCategories />} />
             <Route path="/owner/slides" element={<OwnerSlides />} />
             <Route path="/owner/reviews" element={<OwnerReviews />} />
-          </Route> */}
+          </Route>
 
-          {/* <Route path="*" element={<NotFound />} />
-        </Route> */}
+          <Route path="*" element={<NotFound />} />
+        </Route>
       </Routes>
     </>
   );
