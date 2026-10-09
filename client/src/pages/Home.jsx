@@ -78,13 +78,13 @@ export default function Home() {
         <img 
           src="https://media.istockphoto.com/id/2228819615/photo/the-child-has-snot-the-child-is-crying-selective-focus.jpg?s=612x612&w=0&k=20&c=bYzeWMF10fShZ3efpbNOZP2uRkgzanzuPwNXMt5K6ps=" 
           alt="Crying child" 
-          style={ 
+          style={{
             position: 'fixed', 
             top: 0, 
             left: 0, 
             width: '100vw', 
             height: '100vh',  
-          } 
+          }}
           
         />
         <img 
