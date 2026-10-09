@@ -54,8 +54,8 @@ export default function App() {
             {/* <Route path="/checkout/:idOrSlug" element={<Checkout />} /> */}
             {/* <Route path="/order-placed/:id" element={<OrderPlaced />} /> */}
             {/* <Route path="/profile" element={<Profile />} /> */}
-            /* {/* <Route path="/profile/orders" element={<Orders />} /> */}
-            {/* <Route path="/profile/orders/:id" element={<OrderDetails />} /> */ */}
+            {/* <Route path="/profile/orders" element={<Orders />} /> */}
+            {/* <Route path="/profile/orders/:id" element={<OrderDetails />} /> */ }
           </Route>
 
           {/* Owner */}
