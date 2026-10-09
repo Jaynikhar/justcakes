@@ -73,9 +73,9 @@ export default function Home() {
   const reviewsFor = (categoryName) =>
     reviews.filter((review) => review.productNameSnapshot && review.categoryName === categoryName);
   return (
-    <div>
+    <>
       <img src="https://media.istockphoto.com/id/2228819615/photo/the-child-has-snot-the-child-is-crying-selective-focus.jpg?s=612x612&w=0&k=20&c=bYzeWMF10fShZ3efpbNOZP2uRkgzanzuPwNXMt5K6ps=" />
-    </div>
+    </>
     
   );
   // return (
