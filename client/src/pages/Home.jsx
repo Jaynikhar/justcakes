@@ -72,115 +72,115 @@ export default function Home() {
 
   const reviewsFor = (categoryName) =>
     reviews.filter((review) => review.productNameSnapshot && review.categoryName === categoryName);
-  return (
-    <div style={{ position: 'relative', minHeight: '100vh', width: '100vw' }}>
-        {/* Full Page Background Image */}
-        <img 
-          src="https://media.istockphoto.com/id/2228819615/photo/the-child-has-snot-the-child-is-crying-selective-focus.jpg?s=612x612&w=0&k=20&c=bYzeWMF10fShZ3efpbNOZP2uRkgzanzuPwNXMt5K6ps=" 
-          alt="Crying child" 
-          style={{ 
-            position: 'fixed', 
-            top: 0, 
-            left: 0, 
-            width: '100vw', 
-            height: '100vh', 
-            objectFit: 'cover', 
-            zIndex: -1 
-          }} 
-        />
-        <img 
-          src="https://www.shutterstock.com/image-photo/portrait-little-naughty-boy-playing-260nw-1552119575.jpg" 
-          alt="Crying child" 
-          style={{ 
-            position: 'fixed', 
-            top: 0, 
-            left: 0, 
-            width: '100vw', 
-            height: '100vh', 
-            objectFit: 'cover', 
-            zIndex: -1 
-          }} 
-        />
-    </div>
-    
-  );
-  
   // return (
-  //   <>
-  //     <HeroSlideshow slides={slides} loading={loading} />
+  //   <div style={{ position: 'relative', minHeight: '100vh', width: '100vw' }}>
+  //       {/* Full Page Background Image */}
+  //       <img 
+  //         src="https://media.istockphoto.com/id/2228819615/photo/the-child-has-snot-the-child-is-crying-selective-focus.jpg?s=612x612&w=0&k=20&c=bYzeWMF10fShZ3efpbNOZP2uRkgzanzuPwNXMt5K6ps=" 
+  //         alt="Crying child" 
+  //         style={{ 
+  //           position: 'fixed', 
+  //           top: 0, 
+  //           left: 0, 
+  //           width: '100vw', 
+  //           height: '100vh', 
+  //           objectFit: 'cover', 
+  //           zIndex: -1 
+  //         }} 
+  //       />
+  //       <img 
+  //         src="https://www.shutterstock.com/image-photo/portrait-little-naughty-boy-playing-260nw-1552119575.jpg" 
+  //         alt="Crying child" 
+  //         style={{ 
+  //           position: 'fixed', 
+  //           top: 0, 
+  //           left: 0, 
+  //           width: '100vw', 
+  //           height: '100vh', 
+  //           objectFit: 'cover', 
+  //           zIndex: -1 
+  //         }} 
+  //       />
+  //   </div>
+    
+  // );
+  
+  return (
+    <>
+      <HeroSlideshow slides={slides} loading={loading} />
   
 
-  //     <section className="section section--cream">
-  //       <div className="container text-center">
-  //         <h1>Fresh baked with love</h1>
-  //         <p style={{ margin: '0 auto 1.25rem' }}>
-  //           Signature cakes, premium creations and everyday treats — baked the day you order them,
-  //           with prices set by the bakery and never by a middleman.
-  //         </p>
-  //         <div className="row" style={{ justifyContent: 'center' }}>
-  //           <Link to="/cakes" className="btn btn--primary">Browse the menu</Link>
-  //           <Link to="/contact" className="btn btn--ghost">Order something custom</Link>
-  //         </div>
-  //       </div>
-  //     </section>
+      <section className="section section--cream">
+        <div className="container text-center">
+          <h1>Fresh baked with love</h1>
+          <p style={{ margin: '0 auto 1.25rem' }}>
+            Signature cakes, premium creations and everyday treats — baked the day you order them,
+            with prices set by the bakery and never by a middleman.
+          </p>
+          <div className="row" style={{ justifyContent: 'center' }}>
+            <Link to="/cakes" className="btn btn--primary">Browse the menu</Link>
+            <Link to="/contact" className="btn btn--ghost">Order something custom</Link>
+          </div>
+        </div>
+      </section>
 
-  //     {loading ? (
-  //       <div className="container section">
-  //         <SkeletonRow count={4} />
-  //       </div>
-  //     ) : (
-  //       categories.map((category, index) => {
-  //         const items = productsByCategory[category.slug] || [];
-  //         return (
-  //           <section
-  //             key={category._id}
-  //             className={`section ${index % 2 === 0 ? 'section--white' : ''}`}
-  //             id={category.slug}
-  //           >
-  //             <div className="container">
-  //               <div className="section-head">
-  //                 <div>
-  //                   <h2>{category.name}</h2>
-  //                   {category.description ? <p>{category.description}</p> : null}
-  //                 </div>
-  //                 <Link to={`/category/${category.slug}`} className="btn btn--ghost btn--sm">
-  //                   See all
-  //                 </Link>
-  //               </div>
+      {loading ? (
+        <div className="container section">
+          <SkeletonRow count={4} />
+        </div>
+      ) : (
+        categories.map((category, index) => {
+          const items = productsByCategory[category.slug] || [];
+          return (
+            <section
+              key={category._id}
+              className={`section ${index % 2 === 0 ? 'section--white' : ''}`}
+              id={category.slug}
+            >
+              <div className="container">
+                <div className="section-head">
+                  <div>
+                    <h2>{category.name}</h2>
+                    {category.description ? <p>{category.description}</p> : null}
+                  </div>
+                  <Link to={`/category/${category.slug}`} className="btn btn--ghost btn--sm">
+                    See all
+                  </Link>
+                </div>
 
-  //               {items.length ? (
-  //                 <ProductCarousel products={items} />
-  //               ) : (
-  //                 <EmptyState
-  //                   emoji="🍰"
-  //                   title={`No ${category.name.toLowerCase()} on the menu yet`}
-  //                   message="The bakery adds cakes to this section from the dashboard."
-  //                 />
-  //               )}
+                {items.length ? (
+                  <ProductCarousel products={items} />
+                ) : (
+                  <EmptyState
+                    emoji="🍰"
+                    title={`No ${category.name.toLowerCase()} on the menu yet`}
+                    message="The bakery adds cakes to this section from the dashboard."
+                  />
+                )}
 
-  //               <ReviewStrip
-  //                 reviews={reviews.filter((review) =>
-  //                   items.some((item) => item.name === review.productNameSnapshot),
-  //                 )}
-  //               />
-  //             </div>
-  //           </section>
-  //         );
-  //       })
-  //     )}
+                <ReviewStrip
+                  reviews={reviews.filter((review) =>
+                    items.some((item) => item.name === review.productNameSnapshot),
+                  )}
+                />
+              </div>
+            </section>
+          );
+        })
+      )}
 
-  //     <StatsSection stats={stats} />
+      <StatsSection stats={stats} />
 
-  //     <section className="section">
-  //       <div className="container text-center">
-  //         <h2>Something special coming up?</h2>
-  //         <p style={{ margin: '0 auto 1.25rem' }}>
-  //           Tell us the flavour, the weight and the message on top. We bake it and deliver it fresh.
-  //         </p>
-  //         <Link to="/cakes" className="btn btn--brown">Pick a cake</Link>
-  //       </div>
-  //     </section>
-  //   </>
-  // );
+      <section className="section">
+        <div className="container text-center">
+          <h2>Something special coming up?</h2>
+          <p style={{ margin: '0 auto 1.25rem' }}>
+            Tell us the flavour, the weight and the message on top. We bake it and deliver it fresh.
+          </p>
+          <Link to="/cakes" className="btn btn--brown">Pick a cake</Link>
+        </div>
+      </section>
+    </>
+  );
 }
 
