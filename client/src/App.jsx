@@ -37,26 +37,30 @@ export default function App() {
         <Route element={<Layout />}>
           {/* Public */}
           <Route path="/" element={<Home />} />
-          <Route path="/cakes" element={<Cakes />} />
-          <Route path="/category/:slug" element={<CategoryPage />} />
-          <Route path="/product/:idOrSlug" element={<ProductDetails />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+          {/* <Route path="/cakes" element={<Cakes />} /> */}
+          {/* <Route path="/category/:slug" element={<CategoryPage />} /> */}
+          {/* <Route path="/product/:idOrSlug" element={<ProductDetails />} /> */}
+          {/* <Route path="/about" element={<About />} /> */}
+          {/* <Route path="/contact" element={<Contact />} /> */}
+          {/* <Route path="/login" element={<Login />} /> */}
+          {/* <Route path="/register" element={<Register />} /> */ }
+          <div></div>
 
+          
+
+          
           {/* Signed-in customer */}
-          <Route element={<ProtectedRoute />}>
-            <Route path="/checkout/:idOrSlug" element={<Checkout />} />
-            <Route path="/order-placed/:id" element={<OrderPlaced />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/profile/orders" element={<Orders />} />
-            <Route path="/profile/orders/:id" element={<OrderDetails />} />
+          {/* <Route element={<ProtectedRoute />}> */}
+            {/* <Route path="/checkout/:idOrSlug" element={<Checkout />} /> */}
+            {/* <Route path="/order-placed/:id" element={<OrderPlaced />} /> */}
+            {/* <Route path="/profile" element={<Profile />} /> */}
+            /* {/* <Route path="/profile/orders" element={<Orders />} /> */}
+            {/* <Route path="/profile/orders/:id" element={<OrderDetails />} /> */ */}
           </Route>
 
           {/* Owner */}
-          <Route element={<OwnerRoute />}>
-            <Route path="/owner" element={<OwnerDashboard />} />
+          {/* <Route element={<OwnerRoute />}> */}
+            {/* <Route path="/owner" element={<OwnerDashboard />} /> */}
             <Route path="/owner/orders" element={<OwnerOrders />} />
             <Route path="/owner/orders/:id" element={<OwnerOrderDetails />} />
             <Route path="/owner/products" element={<OwnerProducts />} />
