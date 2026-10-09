@@ -50,12 +50,12 @@ export default function App() {
 
           
           {/* Signed-in customer */}
-          {/* <Route element={<ProtectedRoute />}> */}
-            {/* <Route path="/checkout/:idOrSlug" element={<Checkout />} /> */}
-            {/* <Route path="/order-placed/:id" element={<OrderPlaced />} /> */}
-            {/* <Route path="/profile" element={<Profile />} /> */}
-            {/* <Route path="/profile/orders" element={<Orders />} /> */}
-            {/* <Route path="/profile/orders/:id" element={<OrderDetails />} /> */ }
+          <Route element={<ProtectedRoute />}>
+            <Route path="/checkout/:idOrSlug" element={<Checkout />} />
+            <Route path="/order-placed/:id" element={<OrderPlaced />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/profile/orders" element={<Orders />} />
+            <Route path="/profile/orders/:id" element={<OrderDetails />} />
           </Route>
 
           {/* Owner */}
